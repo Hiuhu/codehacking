@@ -1,7 +1,11 @@
 body {
-  font-family: 'chiller'; }
+  font-family: 'chiller';
+  font-size: 2em; }
 
 #admin-page {
   padding-top: 0px; }
+
+.dropdown-user {
+  height: initial; }
 
 /*# sourceMappingURL=app.css.map */
