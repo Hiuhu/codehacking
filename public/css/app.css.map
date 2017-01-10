@@ -1,1 +1,1 @@
-{"version":3,"sources":["app.css"],"names":[],"mappings":"AAAA","file":"app.css","sourcesContent":[]}
+{"version":3,"sources":["app.scss"],"names":[],"mappings":"AAEA;EAEE,uBAAuB,EAGxB;;AAED;EAEE,iBAAgB,EAEjB","file":"app.css","sourcesContent":["// @import \"node_modules/bootstrap-sass/assets/stylesheets/bootstrap\";\r\n\r\nbody {\r\n\r\n  font-family: 'chiller';\r\n\r\n\r\n}\r\n\r\n#admin-page {\r\n\r\n  padding-top:0px;\r\n\r\n}\r\n\r\n"]}
