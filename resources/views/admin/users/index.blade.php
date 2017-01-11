@@ -7,8 +7,9 @@
 
     <table class="table table-striped">
         <thead class="btn-info">
-            <tr>
+            <tr >
               <th>Id</th>
+                <th>Photo</th>
               <th>Name</th>
               <th>Email</th>
                 <th>Role</th>
@@ -25,9 +26,10 @@
 
             <tr>
                 <td>{{$user->id}}</td>
-                <td>{{$user->name}}</td>
+                <td><img height="50" width="70" src="{{$user->photo ? $user->photo->file : '/images/man.jpg'}}" alt=""></td>
+                <td><a href="{{route('admin.users.edit', $user->id)}}" class="btn btn-primary">{{$user->name}}</a></td>
                 <td>{{$user->email}}</td>
-                <td>{{$user->role->name}}</td>
+                <td>{{$user->role ? $user->role->name : 'User has no role'}}</td>
                 <td>
                     @if($user->is_active == 1)
 
@@ -38,7 +40,6 @@
                           <span class="glyphicon glyphicon-remove"></span>
 
                     @endif
-
                 </td>
                 <td>{{$user->created_at->diffForHumans()}}</td>
                 <td>{{$user->updated_at->diffForHumans()}}</td>

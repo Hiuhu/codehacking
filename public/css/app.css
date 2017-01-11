@@ -1,11 +1,15 @@
 body {
   font-family: 'chiller';
-  font-size: 2em; }
+  font-size: 2em;
+  background: url("http://codehacking.dev/css/pagani.jpg") fixed center no-repeat #fff; }
 
 #admin-page {
   padding-top: 0px; }
 
 .dropdown-user {
   height: initial; }
+
+#page-wrapper {
+  background-color: #ffffffe6; }
 
 /*# sourceMappingURL=app.css.map */
