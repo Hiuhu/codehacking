@@ -3,6 +3,16 @@
 
 @section('content')
 
+    @if(Session::has('deleted_user'))
+
+        <div class="alert alert-success">
+
+                   {{session('deleted_user')}}
+
+                </div>
+
+        @endif
+
     <h1><span class="glyphicon glyphicon-user"></span> Users</h1>
 
     <table class="table table-striped">

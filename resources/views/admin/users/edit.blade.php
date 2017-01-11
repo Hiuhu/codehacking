@@ -54,16 +54,26 @@
         <div class="form-group">
 
             {!! Form::label('password', 'Password') !!}
-            {!! Form::password('password', ['class'=>'form-control']) !!}
+            {!! Form::password('password', ['class'=>'form-control', 'placeholder'=>'Enter Password']) !!}
 
         </div>
 
 
         <div class="form-group">
             {!! Form::submit('Save', ['class'=>'btn btn-success']) !!}
+            {!! Form::button('Clear', ['class'=>'btn btn-default pull-right', 'type'=>'reset']) !!}
         </div>
 
         {!! Form::close() !!}
+
+        {!! Form::model($user, ['method'=>'DELETE', 'action'=>['AdminUsersController@destroy', $user->id], 'class'=>'pull-right']) !!}
+
+
+             <div class="form-group">
+                {!! Form::submit('Delete User', ['class'=>'btn btn-danger']) !!}
+             </div>
+
+             {!! Form::close() !!}
 
     </div>
 
