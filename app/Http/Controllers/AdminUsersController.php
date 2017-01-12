@@ -141,6 +141,8 @@ class AdminUsersController extends Controller
 
             $input = $request->all();
 
+            $input['password'] = bcrypt($request->password);
+
         }
 
         if ($file = $request->file('photo_id')) {
@@ -154,8 +156,6 @@ class AdminUsersController extends Controller
             $input['photo_id'] = $photo->id;
 
         }
-
-        $input['password'] = bcrypt($request->password);
 
         $user->update($input);
 
